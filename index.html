@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timepass</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css?family=Chango&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Chango|Montserrat:900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Erica+One&display=swap" rel="stylesheet">
+    </head>
+    <style>
+    	@media(min-width:492px){
+    		img{
+    			width:20%!important;
+    		}
+    	}
+    	@media(min-width:1158px){
+    		img{
+    			width:10%!important;
+    		}
+    	}
+        .button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+    border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41;color:white;}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  color:white;
+}
+.button:focus{
+    box-shadow:none!important;
+}
+    </style>
+    <body style="background: linear-gradient(90deg, rgba(18,222,127,0.8435749299719888) 33%, rgba(0,212,255,1) 100%);">
+    <div class="container-fluid overflow-hidden" style="font-family: 'Erica One', cursive;">
+    	<h1 class="text-center" style="text-transform:uppercase;color:white;">Hey Play this awesome game</h1>
+    	<div class="container text-center" style="height:500px;">
+    		<h2 class="text-center" style="text-transform:uppercase;color: white;">Hey buddy What's your name</h2>
+    		<input type="text" name="cname" style="text-align:center;padding-right:40px;padding-left:30px;" class="pt-2 pb-2" placeholder="Enter your name.." id="input"><br>
+    		<img src="person.png" class="img-fluid mt-5 imgchange" style="height:100px;width:50%;"> <br>
+    		<button class="btn mt-5 button">Get My Emoji</button>
+    	</div>
+    </div>  
+    <footer class="text-center">
+    	<p class="text-center" style="color:white;font-family: 'Caveat', cursive;font-size:20px;">created by <a href="https://dev.bestpythontutorials.com" style="color:green;text-decoration:underline;"><b>Satyam Kumar Verman</b></a></p>
+    </footer>
+    <script>
+    	$(document).ready(function(){
+    		$('button').click(function(){
+    			const name = $('#input').val();
+                
+                if(name.length != 0){
+                    
+                
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+            }else{
+                alert("Please enter your name!");
+            }
+           
+    		});
+    	});
+    </script>  	
+    </body>
+</html>
